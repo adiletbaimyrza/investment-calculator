@@ -1,9 +1,10 @@
 import { Component, Input } from "@angular/core"
 import { AnnualData } from "../user-input/annual-data.model"
+import { CurrencyPipe } from "@angular/common"
 
 @Component({
   selector: "app-investment-result",
-  imports: [],
+  imports: [CurrencyPipe],
   template: `
     <table>
       @if (annualDataArray.length > 0) {
@@ -24,16 +25,16 @@ import { AnnualData } from "../user-input/annual-data.model"
             {{ data.year }}
           </td>
           <td>
-            {{ data.valueEndOfYear }}
+            {{ data.valueEndOfYear | currency }}
           </td>
           <td>
-            {{ data.interest }}
+            {{ data.interest | currency }}
           </td>
           <td>
-            {{ data.totalInterest }}
+            {{ data.totalInterest | currency }}
           </td>
           <td>
-            {{ data.totalAmountInvested }}
+            {{ data.totalAmountInvested | currency }}
           </td>
         </tr>
         }
