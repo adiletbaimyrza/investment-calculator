@@ -9,24 +9,6 @@ import { Component } from "@angular/core"
       <h1>Investment Calculator</h1>
     </header>
   `,
-  styles: [
-    `
-      header {
-        text-align: center;
-        margin: 3rem auto;
-      }
-
-      header img {
-        width: 5rem;
-        height: 5rem;
-        object-fit: contain;
-        background-color: transparent;
-      }
-
-      header h1 {
-        font-size: 1.5rem;
-      }
-    `,
-  ],
+  styleUrl: "./header.component.css",
 })
 export class HeaderComponent {}
